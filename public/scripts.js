@@ -1,8 +1,4 @@
-const cards = document.querySelectorAll(".card");
+const links = document.querySelectorAll(".link");
+console.log(links);
 
-for (let card of cards) {
-  card.addEventListener("click", function() {
-    const videoId = card.getAttribute("id");
-    window.location.href = `/video?id=${videoId}`;
-  });
-}
+

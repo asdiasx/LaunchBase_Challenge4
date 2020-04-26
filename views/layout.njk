@@ -4,19 +4,20 @@
   <head>
 
     {% block head %}
-      <title>Gym Manager</title>
+      <title>Class manager</title>
     {% endblock %}
 
   </head>
   <body>
     <header >
       <div class="links">
-        <a href="/" class="active">Instructors</a>
-        <a href="/members" class="">Members</a>
+        <a href="/" class="link {{ teachersActive }}">Teachers</a>
+        <a href="/students" class="link {{ studentsActive}}">Students</a>
       </div>
     </header>
 
     {% block content %}{% endblock %}
 
+<script src="/scripts.js"></script>
   </body>
 </html>
