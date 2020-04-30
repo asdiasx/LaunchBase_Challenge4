@@ -1,0 +1,64 @@
+{% extends "layout.njk" %}
+
+{% set teachersActive = "active" %}
+
+{% block content %}
+
+  <form class="card" method="POST" action="/teachers">
+
+    <section class="avatar" style="background: url(https://source.unsplash.com/collection/9901054/500x500/?study) no-repeat center center/cover"></section>
+
+    <section class="details">
+
+      <h3>Cadastro de Professores</h3>
+
+      <div class="item">
+        <div>Avatar URL</div>
+        <input type="text" name="avatar_url" placeholder="http://">
+      </div>
+
+      <div class="item">
+        <div>Nome completo</div>
+        <input type="text" name="name" placeholder="Nome do professor/a">
+      </div>
+
+      <div class="item">
+        <div>Data do nascimento</div>
+        <input type="date" name="birth">
+      </div>
+
+      <div class="item">
+        <div>Grau de escolaridade</div>
+        <select name="graduation">
+          <option value="" selected="selected">Selecione uma das opções no menu</option>
+          <option value="medium">Ensino Médio Completo</option>
+          <option value="superior">Ensino Superior Completo</option>
+          <option value="master">Mestrado</option>
+          <option value="doctor">Doutorado</option>
+        </select>
+      </div>
+
+      <div class="item">
+        <div>Tipo de aula</div>
+        <div>
+          <span>
+            <input type="radio" name="modality" value="onsite">Presencial
+          </span>
+          <span>
+            <input type="radio" name="modality" value="remote">À Distância
+          </span>
+        </div>
+      </div>
+
+      <div class="item">
+        <div>Área de atuação</div>
+        <div>
+          <input type="text" name="specialty" placeholder="Separe as matérias por vígula">
+        </div>
+
+        <button type="submit">Salvar</button>
+
+      </section>
+    </form>
+
+  {% endblock %}
